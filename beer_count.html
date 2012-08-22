@@ -1,0 +1,4 @@
+	<h1>Beers, beers, beers...</h1>
+	<p><ng-pluralize count="account.numberOfBeers()" when="beerForms"></ng-pluralize></p>	
+	<button ng-click="account.removeBeer()" class="btn btn-danger"><i class="icon-minus-sign icon-white"></i> Remove</button>
+	<button ng-click="account.addBeer()" class="btn btn-inverse"><i class="icon-plus-sign icon-white"></i> Add Beer</button>
