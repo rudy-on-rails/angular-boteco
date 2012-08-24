@@ -1,4 +1,9 @@
-	<h1>Beers, beers, beers...</h1>
-	<p><ng-pluralize count="account.numberOfBeers()" when="beerForms"></ng-pluralize></p>	
-	<button ng-click="account.removeBeer()" class="btn btn-danger"><i class="icon-minus-sign icon-white"></i> Remove</button>
-	<button ng-click="account.addBeer()" class="btn btn-inverse"><i class="icon-plus-sign icon-white"></i> Add Beer</button>
+	<p><ng-pluralize count="account.numberOfBeers()" when="beerForms"></ng-pluralize></p>
+  <form name="beer_form">
+    <div class="control-group">
+      <select ng-model="beer" ng-options="beer.getName() for beer in beers | orderBy:'getName()'" ng-required></select>
+    </div>
+    <br clear="all">
+  	<button ng-click="save()" class="btn btn-inverse"><i class="icon-plus-sign icon-white"></i> Add Beer</button>  	
+  </form>
+  <a href="#/beers_detail">Details of consumption</a>
